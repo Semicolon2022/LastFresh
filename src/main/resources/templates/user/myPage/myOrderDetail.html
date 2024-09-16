@@ -120,6 +120,8 @@
                   <td class="progress end" th:if="*{billStatus == '3'} and *{billDeliveryMethod == '2'}">배달 완료</td>
                   <td class="progress end" th:if="*{billStatus == '3'} and *{billDeliveryMethod == '3'}">배송 완료</td>
                   <td class="progress end" th:if="*{billStatus == '3'} and *{billDeliveryMethod == '1'}">픽업 완료</td>
+                  <td class="progress end" th:if="*{billStatus == '4'} and *{billDeliveryMethod == '2'}">배달 대기중</td>
+                  <td class="progress end" th:if="*{billStatus == '4'} and *{billDeliveryMethod == '3'}">배송 대기중</td>
                   <td class="progress end" th:if="*{billStatus == '-1'}">주문 취소</td>
                   <td class="action">
                     <a class="btn btn_after ga_tracking_event" id="After" th:if="*{billStatus == '3'}">완료</a>

@@ -229,11 +229,14 @@
             <!-- userMenu -->
             <div id="userMenuMOBILE">
                 <ul class="menuMOBILE">
-                    <li class="cartMOBILE"><a><img width="40px"
+                    <li class="cartMOBILE"><a onclick="goBasket()"><img width="40px"
                                                    src="https://cdn.discordapp.com/attachments/969471931575320587/973289653627133992/2022-05-10_3.23.55.png"></a>
                     </li>
-                    <li class="myPageMOBILE"><a><img width="40px"
-                                                     src="https://cdn.discordapp.com/attachments/969471931575320587/973289654080139354/2022-05-10_3.22.50.png"></a>
+
+
+                    <li class="myPageMOBILE">
+                        <a th:if="${session.userStatus == null}" href="javascript:goLogin();" > <img width="40px" src="https://cdn.discordapp.com/attachments/969471931575320587/973289654080139354/2022-05-10_3.22.50.png"></a>
+                        <a th:if="${session.userStatus != null}" href="javascript:goMyPage();"> <img width="40px" src="https://cdn.discordapp.com/attachments/969471931575320587/973289654080139354/2022-05-10_3.22.50.png"></a>
                     </li>
                 </ul>
 
@@ -242,7 +245,7 @@
             <div style="margin-top: -39px;"><p>&nbsp;</p></div>
             <div style="text-align: center;">
 
-                <a href="main.html"><img id="logo2"
+                <a href="/main/main"><img id="logo2"
                                          src="https://cdn.discordapp.com/attachments/969471931575320587/973236493160173659/2022-05-09_11.54.16.png"></a>
             </div>
             <!-- Nav -->

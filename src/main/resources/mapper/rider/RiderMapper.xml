@@ -52,7 +52,7 @@
         FROM tbl_bills_product bp
         join tbl_sell_product p on bp.SELL_PRODUCT_NUM =p.SELL_PRODUCT_NUM
         join tbl_bills b on bp.BILL_ORDER_NUM =b.BILL_ORDER_NUM
-        join tbl)user u on bp.USER_NUM =u.USER_NUM
+        join tbl_user u on bp.USER_NUM =u.USER_NUM
         where BILL_DELIVERY_METHOD!=1 and BILL_STATUS=2 and u.USER_NUM=#{userNum} or BILL_DELIVERY_METHOD!=1 and BILL_STATUS=3 and u.USER_NUM=#{userNum}
         or BILL_DELIVERY_METHOD!=1 and BILL_STATUS=4 and u.USER_NUM=#{userNum}
         order by  BILL_PRODUCT_LIST_NUM desc;
